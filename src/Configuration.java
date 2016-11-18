@@ -1,14 +1,23 @@
-
+/**
+ * Main configuration for the assistant.
+ * 
+ * @author Sebastia Guisasola Benitez, Miguel Angel Cabrera Miñagorri
+ * @version 1.0
+ * @since November 2016
+ */
 public class Configuration {
-
+	// Configuration parameters. 
 	private Boolean ini;
 	private	String name;
 	private String lang;
+	private String user;
 	
-	public Configuration() {
-		ini = true;
-		name = "Heyper";
-		lang = "Español";
+	public Configuration(Boolean ini, String name, String lang, String user) {
+		
+		this.ini = ini;
+		this.name = name;
+		this.lang = lang;
+		this.user = user;
 	}
 	
 	// Initiation getter.
@@ -35,6 +44,15 @@ public class Configuration {
 	public void setLang(String lang) {
 		this.lang = lang;
 	}
+	// User getter.
+	public String getUser() {
+		return user;
+	}
+	// User setter.
+	public void setUser(String user) {
+		this.user = user;
+	}
 			
 			
 }
+

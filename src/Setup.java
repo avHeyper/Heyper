@@ -3,15 +3,20 @@ import graph.Wizard;
 
 public class Setup {
 	
-	public static void main(String args[]){
+	public static Boolean installed = false;
+	// Initial configuration.
+	private Configuration config;
+	
+	public Setup() {
 		
-		// Create a new window for the instalation.
-		Wizard setup = new Wizard();
-		setup.setVisible(true);
-		
-		
-		
-		
+		this.installed = true;
+	}
+	
+	// Initiate the configuration process.
+	public initiate(){
 		
 	}
+		
+		
+		
 }

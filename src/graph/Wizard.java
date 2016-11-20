@@ -21,7 +21,8 @@ public class Wizard extends JFrame{
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		setBounds(100, 100, 450, 300);
+		setSize(450, 300);
+		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 

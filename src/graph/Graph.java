@@ -59,7 +59,8 @@ public class Graph {
 		frame.getContentPane().setForeground(new Color(255, 20, 147));
 		frame.setBackground(Color.BLACK);
 		frame.getContentPane().setBackground(UIManager.getColor("Slider.tickColor"));
-		frame.setBounds(100, 100, 338, 167);
+		frame.setSize(338, 167);
+		frame.setLocatioRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		frame.setUndecorated(true);

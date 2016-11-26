@@ -1,3 +1,9 @@
+package Heyper;
+
+import java.io.*;
+
+import graph.HeyperWindow;
+
 /**
  * Main process. 
  * 
@@ -8,14 +14,13 @@
 public class Heyper {
 
 	public static void main(String[] args) {
-		Configuration config;
-		// Check if the program has been already installed.
-		if (Setup.installed == false){
-			
-			Setup install = new Setup();
-			install.initiate();
-		}
-
+	    // Configuration settings
+	    Configuration config = null;
+	    config = new Configuration("res/config.txt");
+	    
+	    // Open Heyper window
+		HeyperWindow mainProcess = new HeyperWindow(config);
+		mainProcess.setVisible(true);
 	}
 
 }

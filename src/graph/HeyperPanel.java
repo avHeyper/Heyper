@@ -21,68 +21,36 @@ import javax.swing.JPanel;
  * @version 1.0
  * @since 26 November 2016
  */
-public class HeyperPanel {
-	private Container panel;
-
-	/*private JFrame frame;*/
-	/*
-	 * Launch the application.
-	 */
-	/*public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Graph window = new Graph();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}*/
-	 	
-	/*
-	 * Description: Initialize the principal frame.
+public class HeyperPanel extends Container{
+	
+	/**
 	 * 
 	 */
-	public HeyperPanel() {
-		initialize();
-	}
+	private static final long serialVersionUID = 1L;
 
-	/**
-	 * Description :Initialize the contents of the frame.
-	 */
-	private void initialize() {
-		panel = new Container();
-		/*frame = new JFrame();
-		frame.setResizable(false);
-		frame.getContentPane().setFont(new Font("UnPilgi", Font.PLAIN, 12));
-		frame.getContentPane().setEnabled(false);
-		frame.getContentPane().setForeground(new Color(255, 20, 147));
-		frame.setBackground(Color.BLACK);
-		frame.getContentPane().setBackground(UIManager.getColor("Slider.tickColor"));
-		frame.setSize(338, 167);
-		frame.setLocationRelativeTo(null);
-		frame.getContentPane().setLayout(null);
-		frame.setUndecorated(true);
-		frame.setOpacity((float) 0.80);*/
-		
-		/*boton para los ajustes*/
+	public HeyperPanel() {
 		JButton setting = new JButton("");
 		setting.setEnabled(false);
 		setting.setBorder(null);
 		setting.setBackground(UIManager.getColor("Slider.tickColor"));
 		setting.setBounds(287, 8, 39, 44);
-		setting.setIcon(new ImageIcon(HeyperPanel.class.getResource("/graph/res/images/ajustes.png")));
-		panel.add(setting);
+		setting.setIcon(new ImageIcon(HeyperWindow.class.getResource("/graph/res/images/ajustes.png")));
+		add(setting);
 		/*boton para añadir funciones*/
 		JButton addfunbutton = new JButton("");
 		addfunbutton.setBackground(UIManager.getColor("Slider.tickColor"));
 		addfunbutton.setForeground(UIManager.getColor("Slider.tickColor"));
 		addfunbutton.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		addfunbutton.setIcon(new ImageIcon(HeyperPanel.class.getResource("/graph/res/images/addoption1.png")));
+		addfunbutton.setIcon(new ImageIcon(HeyperWindow.class.getResource("/graph/res/images/addoption1.png")));
 		addfunbutton.setBounds(245, 12, 34, 34);	
-		//frame.getContentPane().add(addfunbutton);
+		add(addfunbutton);
+		JButton exit = new JButton("");
+		exit.setBackground(UIManager.getColor("Slider.tickColor"));
+		exit.setForeground(UIManager.getColor("Slider.tickColor"));
+		exit.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		addfunbutton.setIcon(new ImageIcon(HeyperWindow.class.getResource("/graph/res/images/exit.png")));
+		exit.setBounds(245, 12, 34, 34);	
+		add(exit);
 		/*Aparecen los comandos escritos en la terminal*/
 		JLabel label = new JLabel("Comandos --opciones");
 		label.setFont(label.getFont().deriveFont(label.getFont().getStyle() | Font.BOLD | Font.ITALIC));
@@ -90,25 +58,14 @@ public class HeyperPanel {
 		label.setBackground(new Color(192, 192, 192));
 		label.setOpaque(true);
 		label.setBounds(47, 73, 243, 34);
-		//frame.getContentPane().add(label);
+		add(label);
 		/*Logo del programa*/
 		JLabel lblHeyper = new JLabel("HEYPER");
 		lblHeyper.setForeground(new Color(138, 43, 226));
 		lblHeyper.setBackground(UIManager.getColor("Slider.tickColor"));
 		lblHeyper.setFont(new Font("Dialog", Font.BOLD, 19));
 		lblHeyper.setBounds(12, 12, 97, 34);
-		//frame.getContentPane().add(lblHeyper);
-		/*boton para salir del programa*/
-		JButton exit = new JButton("");
-		exit.setBackground(UIManager.getColor("Slider.tickColor"));
-		exit.setForeground(UIManager.getColor("Slider.tickColor"));
-		exit.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		addfunbutton.setIcon(new ImageIcon(HeyperPanel.class.getResource("/graph/res/images/exit.png")));
-		exit.setBounds(245, 12, 34, 34);	
-		//frame.getContentPane().add(exit);
-		
-	}
-	public Container getContainer(){
-		return panel;
+		add(lblHeyper);
+		/*boton para salir del programa*/	
 	}
 }

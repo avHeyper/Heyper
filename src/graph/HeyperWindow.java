@@ -5,7 +5,7 @@ import java.awt.Font;
 import javax.swing.JFrame;
 import javax.swing.UIManager;
 
-import Heyper.Configuration;
+import main.Configuration;
 /**
  * Description: This class contains the principal frame.
  * @author Miguel Ángel Cabrera Miñagorri, Sebastiá Guisasola Benítez

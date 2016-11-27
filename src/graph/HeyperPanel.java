@@ -23,12 +23,10 @@ import javax.swing.JPanel;
  */
 public class HeyperPanel extends Container{
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	public HeyperPanel() {
+		/*Boton para acceder a los ajustes*/
 		JButton setting = new JButton("");
 		setting.setEnabled(false);
 		setting.setBorder(null);
@@ -44,6 +42,7 @@ public class HeyperPanel extends Container{
 		addfunbutton.setIcon(new ImageIcon(HeyperWindow.class.getResource("/graph/res/images/addoption1.png")));
 		addfunbutton.setBounds(245, 12, 34, 34);	
 		add(addfunbutton);
+		/*boton para salir del programa*/
 		JButton exit = new JButton("");
 		exit.setBackground(UIManager.getColor("Slider.tickColor"));
 		exit.setForeground(UIManager.getColor("Slider.tickColor"));
@@ -66,6 +65,6 @@ public class HeyperPanel extends Container{
 		lblHeyper.setFont(new Font("Dialog", Font.BOLD, 19));
 		lblHeyper.setBounds(12, 12, 97, 34);
 		add(lblHeyper);
-		/*boton para salir del programa*/	
+			
 	}
 }

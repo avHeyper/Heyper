@@ -1,19 +1,14 @@
 package graph;
 
-import java.awt.EventQueue;
 import java.awt.Container;
-import javax.swing.JFrame;
-import javax.swing.JTextField;
 import javax.swing.JButton;
-import javax.swing.JTextPane;
 import javax.swing.ImageIcon;
 import javax.swing.UIManager;
 import java.awt.Color;
-import java.awt.SystemColor;
 import java.awt.Font;
 import javax.swing.JLabel;
 import javax.swing.border.BevelBorder;
-import javax.swing.JPanel;
+
 
 /**
  * Description: This class contains the principal frame.
@@ -25,9 +20,13 @@ public class HeyperPanel extends Container{
 	
 	private static final long serialVersionUID = 1L;
 
+	
+	/**
+	 * Description: Constructor de la clase 
+	 */
 	public HeyperPanel() {
-		/*Boton para acceder a los ajustes*/
-		JButton setting = new JButton("");
+		/*boton para acceder a los ajustes*/
+		JButton setting = new JButton();
 		setting.setEnabled(false);
 		setting.setBorder(null);
 		setting.setBackground(UIManager.getColor("Slider.tickColor"));
@@ -35,23 +34,23 @@ public class HeyperPanel extends Container{
 		setting.setIcon(new ImageIcon(HeyperWindow.class.getResource("/graph/res/images/ajustes.png")));
 		add(setting);
 		/*boton para añadir funciones*/
-		JButton addfunbutton = new JButton("");
+		JButton addfunbutton = new JButton();
 		addfunbutton.setBackground(UIManager.getColor("Slider.tickColor"));
 		addfunbutton.setForeground(UIManager.getColor("Slider.tickColor"));
 		addfunbutton.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		addfunbutton.setIcon(new ImageIcon(HeyperWindow.class.getResource("/graph/res/images/addoption1.png")));
 		addfunbutton.setBounds(245, 12, 34, 34);	
 		add(addfunbutton);
-		/*boton para salir del programa*/
-		JButton exit = new JButton("");
+		/*boton para salir del programa*/	
+		JButton exit = new JButton();
 		exit.setBackground(UIManager.getColor("Slider.tickColor"));
 		exit.setForeground(UIManager.getColor("Slider.tickColor"));
-		exit.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
-		addfunbutton.setIcon(new ImageIcon(HeyperWindow.class.getResource("/graph/res/images/exit.png")));
-		exit.setBounds(245, 12, 34, 34);	
+		exit.setBorder(null);
+		exit.setIcon(new ImageIcon(HeyperWindow.class.getResource("/graph/res/images/exit.png")));
+		exit.setBounds(297, 125, 20, 20);	
 		add(exit);
 		/*Aparecen los comandos escritos en la terminal*/
-		JLabel label = new JLabel("Comandos --opciones");
+		JLabel label = new JLabel();
 		label.setFont(label.getFont().deriveFont(label.getFont().getStyle() | Font.BOLD | Font.ITALIC));
 		label.setForeground(new Color(192, 192, 192));
 		label.setBackground(new Color(192, 192, 192));
@@ -65,6 +64,6 @@ public class HeyperPanel extends Container{
 		lblHeyper.setFont(new Font("Dialog", Font.BOLD, 19));
 		lblHeyper.setBounds(12, 12, 97, 34);
 		add(lblHeyper);
-			
+		
 	}
 }

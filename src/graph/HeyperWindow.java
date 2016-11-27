@@ -1,11 +1,9 @@
 package graph;
 import java.awt.Color;
-import java.awt.EventQueue;
-import java.awt.Font;
 import javax.swing.JFrame;
-import javax.swing.UIManager;
-
 import main.Configuration;
+
+
 /**
  * Description: This class contains the principal frame.
  * @author Miguel Ángel Cabrera Miñagorri, Sebastiá Guisasola Benítez
@@ -20,16 +18,22 @@ public class HeyperWindow extends JFrame{
 	 * Description: Constructor of the frame.
 	 * @params config of type Configuration. 
 	 */
-	public HeyperWindow(Configuration config) {
+	public HeyperWindow(Configuration config){
 		setResizable(false);
 		setBackground(Color.BLACK);
-		setSize(338, 167);
+		setSize(338,167);
 		setLocationRelativeTo(null);
 		setUndecorated(true);
 		setOpacity((float) 0.80);
 		HeyperPanel panel = new HeyperPanel();
-		setContentPane(panel);
+		setPane(panel);
 			
+	}
+	/**
+	* Description: set a new panel
+	*/
+	public void setPane(HeyperPanel panel){
+		setContentPane(panel);
 	}
 
 }

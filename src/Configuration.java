@@ -1,5 +1,3 @@
-package Heyper;
-
 import java.io.*;
 /**
  * Main configuration for the assistant.

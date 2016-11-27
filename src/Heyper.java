@@ -1,5 +1,3 @@
-package Heyper;
-
 import java.io.*;
 
 import graph.HeyperWindow;

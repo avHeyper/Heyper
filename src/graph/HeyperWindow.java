@@ -25,15 +25,10 @@ public class HeyperWindow extends JFrame{
 		setLocationRelativeTo(null);
 		setUndecorated(true);
 		setOpacity((float) 0.80);
-		HeyperPanel panel = new HeyperPanel();
-		setPane(panel);
+		HeyperPanel panel = new HeyperPanel(this);/*le pasamos el propio frame para poder manejarlo*/
+		setContentPane(panel);
 			
 	}
-	/**
-	* Description: set a new panel
-	*/
-	public void setPane(HeyperPanel panel){
-		setContentPane(panel);
-	}
+
 
 }

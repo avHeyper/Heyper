@@ -18,7 +18,7 @@ public class HeyperWindow extends JFrame{
 	 * Description: Constructor of the frame.
 	 * @params config of type Configuration. 
 	 */
-	public HeyperWindow(Configuration config){
+	public HeyperWindow(){
 		setResizable(false);
 		setBackground(Color.BLACK);
 		setSize(338,167);

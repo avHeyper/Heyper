@@ -11,13 +11,9 @@ import graph.HeyperWindow;
  */
 public class Heyper {
 
-	public static void main(String[] args) {
-	    // Configuration settings
-	    Configuration config = null;
-	    config = new Configuration("res/config.txt");
-	    
+	public static void main(String[] args) { 
 	    // Open Heyper window
-		HeyperWindow mainProcess = new HeyperWindow(config);
+		HeyperWindow mainProcess = new HeyperWindow();
 		mainProcess.setVisible(true);
 	}
 

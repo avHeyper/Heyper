@@ -1,0 +1,19 @@
+#JSGF V1.0 UTF-8 es
+/**
+ * Spanish JSGF Grammar for Heyper
+ * @author Sebastiá Guisasola Benítez
+ * @author Miguel Angel Miñagorri
+ */
+grammar Heyper.spanish.grammar
+
+// Command structure
+<statement> = <command> [<object>];
+
+<command> = (abrir | cerrar | buscar | listar | mostrar | (copiar 
+[<object>] en [<where>]) | (mover [<object>] a [<where>]));
+
+<object> = (<where> | navegador | buscador);
+
+<where> = (<name> | carpeta [<name>]);
+
+<name> = [personal];

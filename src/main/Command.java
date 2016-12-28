@@ -2,7 +2,12 @@ package main;
 
 import java.io.IOException;
 import java.util.*;
-
+/**
+ * Description: Contains the command map and the method for make the order.
+ * @author Miguel Ángel Cabrera Miñagorri, Sebastiá Guisasola Benítez
+ * @version 1.0
+ * @since 23 December 2016
+ */
 public class Command {
 	// Map which contains the command list
 	private Map<String,String> commands;

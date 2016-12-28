@@ -6,31 +6,33 @@ import java.util.*;
  * Description: Contains the command map and the method for make the order.
  * @author Miguel Ángel Cabrera Miñagorri, Sebastiá Guisasola Benítez
  * @version 1.0
- * @since 23 December 2016
+ * @since 28 December 2016
  */
 public class Command {
 	// Map which contains the command list
 	private Map<String,String> commands;
 	private String comando;
-	private String instruction;
+	private String instruction = "";
 	
 	public Command(String recog){
 		this.setMap(); // Initialize the command map
 		// Separate the command from the specific instruction
 		String[] arrayString = recog.split(" ");
 		for(int i = 1 ; i < arrayString.length ; i++)
-			this.instruction += arrayString[i];
+			this.instruction += arrayString[i] + " ";
 		// Check if the instruction is contained in the map
 		if ((this.comando = commands.get(arrayString[0])) == null)
 			System.out.println("El comando introducido no es valido");		
 	}
 	
-	// Send the instruction to the system
+	/**
+	 * Description: Send the instruction to the system
+	 */
 	public void makeOrder(){
 		// Array for the full instruction
 		String[] terminal = new String[2];
-		terminal[1] = comando;
-		terminal[2] = instruction;
+		terminal[0] = comando;
+		terminal[1] = instruction;
 		try {
 			Runtime.getRuntime().exec(terminal);
 		} catch (IOException e) {
@@ -39,7 +41,9 @@ public class Command {
 	}
 	
 	
-	
+	/**
+	 * @return comando
+	 */
 	public String getComando(){
 		return comando;
 	}
@@ -48,6 +52,9 @@ public class Command {
 		this.comando = ins;
 	}
 	
+	/**
+	 * Description: Initialize the command map
+	 */
 	public void setMap(){
 		commands = new HashMap<String,String>();
 		commands.put("buscar", "firefox");

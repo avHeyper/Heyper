@@ -1,8 +1,7 @@
 package graph;
+
 import java.awt.Color;
 import javax.swing.JFrame;
-import main.Configuration;
-
 
 /**
  * Description: This class contains the principal frame.

@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 
 
 /**
- * Description: This class contains the principal frame.
+ * Description: This class contains the container of principal frame.
  * @author Miguel Ángel Cabrera Miñagorri, Sebastiá Guisasola Benítez
  * @version 1.0
  * @since 2 December 2016

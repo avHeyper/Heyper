@@ -1,4 +1,5 @@
 package graph;
+
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Font;
@@ -12,7 +13,7 @@ import javax.swing.UIManager;
 import main.Configuration;
 
 /**
- * Description: This class contains the principal frame.
+ * Description: This class contains the configuration of principal frame.
  * @author Miguel Ángel Cabrera Miñagorri, Sebastiá Guisasola Benítez
  * @version 1.0
  * @since 2 December 2016
@@ -149,6 +150,7 @@ public class ConfPanel extends Container implements ActionListener {
 		if(e.getSource()==accept){
 			//llamamos al metodo que confgura el fichero
 			fichconf();
+			heyperwindow.setContentPane(heyperpanel);
 		}
 	}
 	

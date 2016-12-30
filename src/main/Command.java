@@ -58,7 +58,7 @@ public class Command {
 	 */
 	public void setMap(){
 		commands = new HashMap<String,String>();
-		commands.put("buscar", "firefox");
+		commands.put("buscar", "firefox --search");
 		commands.put("listar", "ls");
 		commands.put("mostrar", "ls");
 		commands.put("copiar", "cp");

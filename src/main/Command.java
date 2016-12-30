@@ -42,6 +42,7 @@ public class Command {
 	
 	
 	/**
+	 * Description: return the comand
 	 * @return comando
 	 */
 	public String getComando(){
